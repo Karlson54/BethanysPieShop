@@ -24,8 +24,19 @@
 
             foreach (ShoppingCartItem? shoppingCartItem in shoppingCartItems)
             {
+                var orderDetail = new OrderDetail
+                {
+                    Amount = shoppingCartItem.Amount,
+                    PieId = shoppingCartItem.Pie.PieId,
+                    Price = shoppingCartItem.Pie.Price
+                };
 
+                order.OrderDetails.Add(orderDetail);
             }
+
+            _bethanysPieShopDbContext.Orders.Add(order);
+
+            _bethanysPieShopDbContext.SaveChanges();
         }
     }
 }
