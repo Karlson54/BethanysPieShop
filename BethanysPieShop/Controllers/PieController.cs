@@ -24,7 +24,7 @@ namespace BethanysPieShop.Controllers
         //    return View(pieListViewModel);
         //}
 
-        public IActionResult List(string category)
+        public ViewResult List(string category)
         {
             IEnumerable<Pie> pies;
             string? currentCategory;
@@ -52,6 +52,11 @@ namespace BethanysPieShop.Controllers
             if (pie == null)
                 return NotFound();
             return View(pie);
+        }
+
+        public IActionResult Search()
+        {
+            return View();
         }
     }
 }
