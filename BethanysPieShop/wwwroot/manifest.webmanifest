@@ -1,0 +1,15 @@
+﻿{
+  "name": "Test",
+  "short_name": "Test",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#fff",
+  "description": "Test",
+  "icons": [
+    {
+      "src": "https://3zr2bz84-5262.euw.devtunnels.ms/Images/pie.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
